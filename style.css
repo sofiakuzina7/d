@@ -1,0 +1,139 @@
+/* Общие стили */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #fff;
+    color: #000;
+}
+
+/* Шапка */
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 40px;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 50px;
+    text-transform: uppercase;
+}
+
+nav a {
+    text-decoration: none;
+    color: #666;
+    margin-right: 25px;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    color: #000;
+}
+
+/* Главный блок с фото */
+.hero {
+    display: flex;
+    height: 80vh;
+    width: 100%;
+}
+
+.hero-image {
+    flex: 1;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Секция "Обо мне" */
+.about-section {
+    display: flex;
+    padding: 80px 30px;
+    justify-content: space-between;
+}
+
+.about-left {
+    width: 40%;
+}
+
+.about-right {
+    width: 50%;
+}
+
+.label {
+    font-size: 0.7rem;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.tagline {
+    font-size: 1.1rem;
+    font-weight: 400;
+    max-width: 300px;
+}
+
+.description p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+}
+
+/* Контакты и подвал */
+.contacts-grid {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+    padding-top: 20px;
+}
+
+.contact-item {
+    text-align: center;
+}
+
+.contact-item span {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+}
+
+.icon {
+    font-size: 24px;
+    text-decoration: none;
+    color: #000;
+}
+
+/* Адаптивность для мобильных устройств */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        height: auto;
+    }
+    .hero-image {
+        width: 100%;
+        height: 50vh;
+    }
+    .about-section {
+        flex-direction: column;
+        padding: 40px 20px;
+    }
+    .about-left, .about-right {
+        width: 100%;
+    }
+    .logo {
+        margin-right: 20px;
+    }
+    nav a {
+        margin-right: 10px;
+        font-size: 0.7rem;
+    }
+    header {
+        padding: 15px;
+    }
+    .contacts-grid {
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
